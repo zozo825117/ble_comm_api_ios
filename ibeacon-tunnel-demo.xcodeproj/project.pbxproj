@@ -14,10 +14,26 @@
 		6AD9BF3323620DC700834586 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6AD9BF3223620DC700834586 /* Assets.xcassets */; };
 		6AD9BF3623620DC700834586 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6AD9BF3423620DC700834586 /* LaunchScreen.storyboard */; };
 		6AD9BF3923620DC700834586 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD9BF3823620DC700834586 /* main.m */; };
+		6AD9BF462362128E00834586 /* BLECommAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD9BF442362114100834586 /* BLECommAPI.framework */; };
+		6AD9BF472362128E00834586 /* BLECommAPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6AD9BF442362114100834586 /* BLECommAPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		6AD9BF482362128E00834586 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				6AD9BF472362128E00834586 /* BLECommAPI.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		6AD9BF2323620DC600834586 /* BeaconTunnel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BeaconTunnel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6AD9BF2323620DC600834586 /* ibeacon-tunnel-demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ibeacon-tunnel-demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6AD9BF2623620DC600834586 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6AD9BF2723620DC600834586 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6AD9BF2923620DC600834586 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
@@ -29,6 +45,7 @@
 		6AD9BF3523620DC700834586 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6AD9BF3723620DC700834586 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6AD9BF3823620DC700834586 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6AD9BF442362114100834586 /* BLECommAPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BLECommAPI.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +53,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AD9BF462362128E00834586 /* BLECommAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -45,20 +63,21 @@
 		6AD9BF1A23620DC600834586 = {
 			isa = PBXGroup;
 			children = (
-				6AD9BF2523620DC600834586 /* BeaconTunnel */,
+				6AD9BF2523620DC600834586 /* ibeacon-tunnel-demo */,
 				6AD9BF2423620DC600834586 /* Products */,
+				6AD9BF3F23620ECC00834586 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
 		6AD9BF2423620DC600834586 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6AD9BF2323620DC600834586 /* BeaconTunnel.app */,
+				6AD9BF2323620DC600834586 /* ibeacon-tunnel-demo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6AD9BF2523620DC600834586 /* BeaconTunnel */ = {
+		6AD9BF2523620DC600834586 /* ibeacon-tunnel-demo */ = {
 			isa = PBXGroup;
 			children = (
 				6AD9BF2623620DC600834586 /* AppDelegate.h */,
@@ -73,27 +92,36 @@
 				6AD9BF3723620DC700834586 /* Info.plist */,
 				6AD9BF3823620DC700834586 /* main.m */,
 			);
-			path = BeaconTunnel;
+			path = "ibeacon-tunnel-demo";
+			sourceTree = "<group>";
+		};
+		6AD9BF3F23620ECC00834586 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AD9BF442362114100834586 /* BLECommAPI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6AD9BF2223620DC600834586 /* BeaconTunnel */ = {
+		6AD9BF2223620DC600834586 /* ibeacon-tunnel-demo */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6AD9BF3C23620DC700834586 /* Build configuration list for PBXNativeTarget "BeaconTunnel" */;
+			buildConfigurationList = 6AD9BF3C23620DC700834586 /* Build configuration list for PBXNativeTarget "ibeacon-tunnel-demo" */;
 			buildPhases = (
 				6AD9BF1F23620DC600834586 /* Sources */,
 				6AD9BF2023620DC600834586 /* Frameworks */,
 				6AD9BF2123620DC600834586 /* Resources */,
+				6AD9BF482362128E00834586 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = BeaconTunnel;
+			name = "ibeacon-tunnel-demo";
 			productName = BeaconTunnel;
-			productReference = 6AD9BF2323620DC600834586 /* BeaconTunnel.app */;
+			productReference = 6AD9BF2323620DC600834586 /* ibeacon-tunnel-demo.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -110,7 +138,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6AD9BF1E23620DC600834586 /* Build configuration list for PBXProject "BeaconTunnel" */;
+			buildConfigurationList = 6AD9BF1E23620DC600834586 /* Build configuration list for PBXProject "ibeacon-tunnel-demo" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -123,7 +151,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6AD9BF2223620DC600834586 /* BeaconTunnel */,
+				6AD9BF2223620DC600834586 /* ibeacon-tunnel-demo */,
 			);
 		};
 /* End PBXProject section */
@@ -291,7 +319,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TFX2Z4436A;
-				INFOPLIST_FILE = BeaconTunnel/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ibeacon-tunnel-demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -308,7 +340,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TFX2Z4436A;
-				INFOPLIST_FILE = BeaconTunnel/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/ibeacon-tunnel-demo/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,7 +358,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6AD9BF1E23620DC600834586 /* Build configuration list for PBXProject "BeaconTunnel" */ = {
+		6AD9BF1E23620DC600834586 /* Build configuration list for PBXProject "ibeacon-tunnel-demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AD9BF3A23620DC700834586 /* Debug */,
@@ -331,7 +367,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6AD9BF3C23620DC700834586 /* Build configuration list for PBXNativeTarget "BeaconTunnel" */ = {
+		6AD9BF3C23620DC700834586 /* Build configuration list for PBXNativeTarget "ibeacon-tunnel-demo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6AD9BF3D23620DC700834586 /* Debug */,

@@ -1,0 +1,6 @@
+framework module BLECommAPI {
+  umbrella header "BLECommAPI.h"
+
+  export *
+  module * { export * }
+}

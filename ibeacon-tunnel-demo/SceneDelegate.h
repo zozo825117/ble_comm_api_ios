@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.h
-//  BeaconTunnel
+//  BeaconSample
 //
-//  Created by cheneyang on 2019/10/25.
+//  Created by cheneyang on 2019/10/21.
 //  Copyright © 2019 cheneyang. All rights reserved.
 //
 
