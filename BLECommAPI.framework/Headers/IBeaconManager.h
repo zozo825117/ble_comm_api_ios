@@ -1,11 +1,3 @@
-//
-//  IBeaconManager.h
-//  BLECommAPI
-//
-//  Created by cheneyang on 2019/10/22.
-//  Copyright © 2019 cheneyang. All rights reserved.
-//
-
 #ifndef IBeaconManager_h
 #define IBeaconManager_h
 
@@ -50,11 +42,39 @@ typedef NS_ENUM (NSInteger, ConnectStatus) {
 
 @property id listener;
 
-- (void)startScanWith:(NSString *)name;
+/**
+ * start scan
+ */
 - (void)startScan;
+
+/**
+ * start scan by name
+ * @param name : target name
+ */
+- (void)startScanWith:(NSString *)name;
+
+/**
+ * stop scan
+ */
 - (void)stopScan;
+
+/**
+ * connect target beacon
+ * @param beacon : target beacon after scan success
+ * @param token : hex string, length must be 12, standing for 6 bytes, used for encryption in communication
+ * @param timeout : connect timeout, seconds
+ */
 - (void)connect:(Beacon*) beacon token: (NSString*) token timeout: (int) timeout;
+
+/**
+ * disconnect
+ */
 - (void)disconnect;
+
+/**
+ * write data
+ * @param data : data
+ */
 - (void)write:(NSData *)data;
 
 @end

@@ -1,11 +1,3 @@
-//
-//  Beacon.h
-//  BLECommAPI
-//
-//  Created by cheneyang on 2019/10/22.
-//  Copyright © 2019 cheneyang. All rights reserved.
-//
-
 #ifndef Beacon_h
 #define Beacon_h
 

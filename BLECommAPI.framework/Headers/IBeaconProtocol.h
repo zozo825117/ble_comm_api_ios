@@ -1,11 +1,3 @@
-//
-//  IBeaconProtocol.h
-//  BLECommAPI
-//
-//  Created by cheneyang on 2019/10/22.
-//  Copyright © 2019 cheneyang. All rights reserved.
-//
-
 #ifndef IBeaconProtocol_h
 #define IBeaconProtocol_h
 
@@ -18,7 +10,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol IBeaconListener <NSObject>
 
 /**
- * ble communication requirement success
+ * ble comm success
  * @param Op :
  *             OpAdv : start advertisement
  *             OpConnReq : connection request
@@ -30,7 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 -(void) onStartSuccess:(int) op;
 
 /**
- * ble communication requirement failed
+ * ble comm failed
  * @param Op :
  *             OpAdv : start advertisement
  *             OpConnReq : connection request
@@ -42,55 +34,66 @@ NS_ASSUME_NONNULL_BEGIN
 @required
 -(void) onStartFailure:(int) op error:(BLEError) error;
 
-///start scan
-///
-///
-///@param result: result
-///@param error: error
+/**
+ * start scan
+ * @param result: result
+ * @param error: error
+ *
+ */
 @required
 -(void) onScanStart:(bool) result error:(BLEError) error;
 
-/// scan success
-///
-/// - Parameter beacon: beacon
+/**
+ * scan success
+ * @param beacon: target beacon
+ *
+ */
 @required
 -(void) onScanSuccess:(Beacon*) beacon;
 
-/// connect start
-///
-/// @param beacon: target
-/// @param error: error
+/**
+ * connect start
+ * @param beacon: target beacon
+ * @param error: error
+ */
 @required
 -(void) onConnectStart:(Beacon*) beacon error:(BLEError) error;
 
-/// connected
-///
-///@param beacon: beacon device
+/**
+ * connect success
+ * @param beacon: target beacon
+ */
 @required
 -(void) onConnectSuccess:(Beacon*) beacon;
 
-/// disconnected
-///
-/// @param beacon: device
-/// @param error: error
+/**
+ * disconnect
+ * @param beacon: target beacon
+ * @param error: error
+ */
 @required
 -(void) onDisconnect:(Beacon*) beacon error:(BLEError) error;
 
-/// bluetooth device status updated
-///
-/// @param status: new device status
+/**
+ * ble status update
+ * @param beacon: target beacon
+ * @param status: new device status
+*/
 @required
 -(void) onBLEStatusUpdate:(BLEStatus) status;
 
-/// received data
-///
-/// @param data: received data
+/**
+ * received data
+ * @param data: received data
+ */
 @required
 -(void) onReceive:(NSData*) data;
 
-/// send success with index
-///
-/// @param index: index of sended data
+/**
+ * send success with index
+ * @param data: received data
+ * @param index: index of sended data
+ */
 @required
 -(void) onSendSuccess:(int) index;
 

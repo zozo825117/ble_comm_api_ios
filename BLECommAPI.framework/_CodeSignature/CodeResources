@@ -6,31 +6,27 @@
 	<dict>
 		<key>Headers/BLECommAPI.h</key>
 		<data>
-		VB1PjyAhIjDobI8hSKQcrsKmZho=
+		XkncvAjVn3WIJXtiIHERNtzis2o=
 		</data>
 		<key>Headers/Beacon.h</key>
 		<data>
-		isNm6xoi847ysLQNH1nqAaZmxaQ=
+		FbsSg+Ya/1GyGlfV11GxtQzYtrA=
 		</data>
 		<key>Headers/IBeaconManager.h</key>
 		<data>
-		5pMwYSr4TykiA7gKzNXmzSssFLQ=
+		+43HBRG7A9QUaPAMTlob9a6NAqo=
 		</data>
 		<key>Headers/IBeaconProtocol.h</key>
 		<data>
-		RTK3A78t8fYFQAqY9TuD2W4XJ+s=
+		xVpjilqyg6GvRn4+0vlXrulkkGA=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		lAYrAPv2sK+M77gvwOA4lHzec4I=
+		GQE/KSCNfxHsL2r191i/o5Hjz6E=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		n+VqWEQFXnClG2oRUJ/mCt4lUlc=
-		</data>
-		<key>PrivateHeaders/AnyIBeacons.h</key>
-		<data>
-		+KRr4a7fRxJlIc612OsG5OWJ1aY=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -39,28 +35,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			o/RDgT791SrkSnwtiqITvfTY/4gbjvyazqS4f880ebg=
+			QFdVaJVNYDm/ntLFV5g4I0cm793umM9FSTU6Q7yv7LY=
 			</data>
 		</dict>
 		<key>Headers/Beacon.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			CtrVF5DB9PUobf9iSwGmjaGO8dHp7qdihSRVWNdBr6k=
+			bSEMcoh8vDbfLDfxYacbwpnTSKhCSI0xwahmfWkBbS4=
 			</data>
 		</dict>
 		<key>Headers/IBeaconManager.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZAqTD+ZQ7le4siyUyKUIDSBCZczIcqLtOpeT7h69P4o=
+			iOliji0XMvo7Spk17aa4+jaOSm1aPtZTu89TkCIC26Y=
 			</data>
 		</dict>
 		<key>Headers/IBeaconProtocol.h</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			XgjHRtOSzcD2NK1hoVndhPWZz2bAg8p5RfEiUcYkyvU=
+			S/6XaNGBvYsUWEbvWs9fIKeAdtze5rt3el9fcs91K4c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -68,13 +64,6 @@
 			<key>hash2</key>
 			<data>
 			QFhLgb8hWuAfGCEMmZXqKD3OEUXL0JDZYe/xrZCersk=
-			</data>
-		</dict>
-		<key>PrivateHeaders/AnyIBeacons.h</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			31hf+IJ4a8FOYg/efxG5wuQHQgXuw1IwfUSZrxkG0uQ=
 			</data>
 		</dict>
 	</dict>
