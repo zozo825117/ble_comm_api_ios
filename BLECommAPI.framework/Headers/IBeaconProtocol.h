@@ -10,31 +10,6 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol IBeaconListener <NSObject>
 
 /**
- * ble comm success
- * @param Op :
- *             OpAdv : start advertisement
- *             OpConnReq : connection request
- *             OpConnResp : connection resp
- *             OpDisconnReq : disconnect
- *             OpTran : write data
- */
-@required
--(void) onStartSuccess:(int) op;
-
-/**
- * ble comm failed
- * @param Op :
- *             OpAdv : start advertisement
- *             OpConnReq : connection request
- *             OpConnResp : connection resp
- *             OpDisconnReq : disconnect
- *             OpTran : write data
- * @param errorCode :  BLE_ERROR_INVALID_PARAMETER or BLE_ERROR_INVALID_OPERATION
- */
-@required
--(void) onStartFailure:(int) op error:(BLEError) error;
-
-/**
  * start scan
  * @param result: result
  * @param error: error
@@ -50,6 +25,31 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @required
 -(void) onScanSuccess:(Beacon*) beacon;
+
+/**
+ * ble comm success
+ * @param Op :
+ *             OpAdv : start advertisement
+ *             OpConnReq : connection request
+ *             OpConnResp : connection resp
+ *             OpDisconnReq : disconnect
+ *             OpTran : write data
+ */
+@required
+-(void) onOperationStartSuccess:(int) op;
+
+/**
+ * ble comm failed
+ * @param Op :
+ *             OpAdv : start advertisement
+ *             OpConnReq : connection request
+ *             OpConnResp : connection resp
+ *             OpDisconnReq : disconnect
+ *             OpTran : write data
+ * @param errorCode :  BLE_ERROR_INVALID_PARAMETER or BLE_ERROR_INVALID_OPERATION
+ */
+@required
+-(void) onOperationStartFailure:(int) op error:(BLEError) error;
 
 /**
  * connect start

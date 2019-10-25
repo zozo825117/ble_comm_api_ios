@@ -8,6 +8,12 @@
 #import "AnyIBeacons.h"
 #import "IBeaconProtocol.h"
 
+const UInt8 OpAdv = 0x00;
+const UInt8 OpConnReq = 0x01;
+const UInt8 OpConnResp = 0x02;
+const UInt8 OpDisconnReq = 0x03;
+const UInt8 OpTran = 0x04;
+
 typedef NS_ENUM (NSInteger, ConnectStatus) {
     Normal,
     ConnectRequest,

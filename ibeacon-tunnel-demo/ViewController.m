@@ -46,11 +46,11 @@
     [self.view endEditing:YES];
 }
 
-- (void)onStartSuccess:(int)op {
+- (void)onOperationStartSuccess:(int)op {
     NSLog(@"[sample] callback: on start success: %d", op);
 }
 
-- (void)onStartFailure:(int)op error:(BLEError)error {
+- (void)onOperationStartFailure:(int)op error:(BLEError)error {
     NSLog(@"[sample] callback: on start fail: %d %ld", op, error);
 }
 
