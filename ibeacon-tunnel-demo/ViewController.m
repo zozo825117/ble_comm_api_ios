@@ -33,7 +33,12 @@
     NSString *msg = self.writeDataTextField.text;
     NSLog(@"[sample] call write with msg: %@", msg);
     
-    [IBeaconManager.sharedInstance write:[msg dataUsingEncoding:NSUTF8StringEncoding]];
+    NSData *data = [self hexStringToData:msg];
+    if (data == nil || data.length == 0) {
+        NSLog(@"[sample] invalid hex string to write: %@", msg);
+        return;
+    }
+    [IBeaconManager.sharedInstance write:data];
     
     [self.view endEditing:YES];
 }
@@ -127,6 +132,23 @@
         [hexString appendString:[NSString stringWithFormat:@"%02x", dataBuffer[i]]];
 
     return [NSString stringWithString:hexString];
+}
+
+- (NSData*)hexStringToData: (NSString *) hexString {
+    NSMutableData* data = [NSMutableData data];
+    for (int i = 0; i + 2 <= hexString.length; i += 2) {
+        NSRange range = NSMakeRange(i, 2);
+        NSString* hex = [hexString substringWithRange:range];
+        NSScanner* scanner = [NSScanner scannerWithString:hex];
+        unsigned int intValue;
+        BOOL result = [scanner scanHexInt:&intValue];
+        if (!result) {
+            return nil;
+        }
+        [data appendBytes:&intValue length:1];
+    }
+
+    return data;
 }
 
 @end
